@@ -7,6 +7,7 @@ import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.os.Build;
 
+// this class is use to network available or not
 public class NetworkHelper {
     public static boolean isOnline(Context context){
         if (context == null) return false;
