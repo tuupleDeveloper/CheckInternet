@@ -58,7 +58,7 @@ public class MyService extends Service {
             handler.postDelayed(periodicUpdate, 1000 - SystemClock.elapsedRealtime() % 1000);
             Intent broadcastIntent = new Intent();
             broadcastIntent.setAction(MainActivity.BroadcastStringForAction);
-            broadcastIntent.putExtra("online_status", "" + isOnline(MyService.this));
+            broadcastIntent.putExtra("online_status", "" + NetworkHelper.isOnline(MyService.this));
             sendBroadcast(broadcastIntent);
         }
     };
