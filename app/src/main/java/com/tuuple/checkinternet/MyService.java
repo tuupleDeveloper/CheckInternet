@@ -50,7 +50,7 @@ public class MyService extends Service {
         return ni != null && ni.isConnectedOrConnecting();
     }
 
-
+    // below code is deprecated PLEASE COMMENT THIS
     Handler handler = new Handler();
     private Runnable periodicUpdate = new Runnable() {
         @Override
