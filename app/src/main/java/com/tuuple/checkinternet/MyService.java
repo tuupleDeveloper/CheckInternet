@@ -28,6 +28,16 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         handler.post(periodicUpdate);
 
+        /*new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent broadcastIntent = new Intent();
+                broadcastIntent.setAction(MainActivity.BroadcastStringForAction);
+                broadcastIntent.putExtra("online_status", ""+isOnline(MyService.this));
+                sendBroadcast(broadcastIntent);
+            }
+        }, 1000 - SystemClock.elapsedRealtime() % 1000);*/
+
         return START_STICKY;
     }
 
