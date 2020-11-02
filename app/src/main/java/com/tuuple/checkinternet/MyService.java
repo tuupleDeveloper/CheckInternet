@@ -28,7 +28,7 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         handler.post(periodicUpdate);
 
-
+        // ############### this code may work ###############
         /*new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
